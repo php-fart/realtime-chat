@@ -1,0 +1,22 @@
+{
+    "token_hmac_secret_key": "739d1fa0-fe07-4e1a-926e-3079322bc518",
+    "admin_password": "ef2e0053-212a-48a8-8a79-621fa91a5949",
+    "admin_secret": "a5c7b70f-ff60-47d5-b896-f0c37e149932",
+    "api_key": "4ab221b6-1e51-4523-ab1b-b4f5d77a1865",
+    "allowed_origins": [
+        "*"
+    ],
+    "allowed_headers": [
+        "*"
+    ],
+    "address": "127.0.0.1",
+    "port": 8081,
+    "grpc_api": true,
+    "grpc_api_address": "127.0.0.1",
+    "grpc_api_port": 10000,
+    "proxy_connect": true,
+    "proxy_connect_endpoint": "grpc://127.0.0.1:10001",
+    "proxy_connect_timeout": "10s",
+    "proxy_rpc_endpoint": "grpc://127.0.0.1:10001",
+    "proxy_rpc_timeout": "10s"
+}

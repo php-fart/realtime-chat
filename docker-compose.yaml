@@ -1,0 +1,35 @@
+version: "3.8"
+
+services:
+  rtc-db:
+    container_name: rtc-db
+    image: postgres
+    environment:
+      POSTGRES_USER: homestead
+      POSTGRES_DB: homestead
+      POSTGRES_PASSWORD: secret
+    ports:
+      - 5432:5432
+    networks:
+      - rtc-network
+    logging:
+      driver: none
+
+  rtc-buggregator:
+    container_name: rtc-buggregator
+    image: ghcr.io/buggregator/server:latest
+    restart: always
+    ports:
+      - 9912:9912
+      - 8001:8000
+    networks:
+      - rtc-network
+    logging:
+      driver: none
+
+networks:
+  rtc-network:
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.0.95.0/24
